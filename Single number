@@ -1,0 +1,34 @@
+//link:  https://leetcode.com/explore/other/card/30-day-leetcoding-challenge/528/week-1/3283/
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    int arr[num];
+    for(int i=0;i<num;i++)
+    {
+        cin>>arr[i];
+    }
+    
+    int count=0,i,j;
+    
+    for(int i=0;i<num;i++)
+    {
+        for(int j=0;j<num;j++)
+        {
+            if(i!=j)
+            {
+                if(arr[i]==arr[j])
+                {
+                    count++;
+                }
+            }
+        }
+        if(count==0)
+        {
+            cout<<arr[i]<<endl;
+        }
+    }
+}
